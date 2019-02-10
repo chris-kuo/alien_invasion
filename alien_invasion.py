@@ -21,11 +21,7 @@ def run_game():
 		gf.check_events()
 
 		# Redraw the scrren during each pass through the game loop
-		screen.fill(ai_settings.bg_color)
-		ship.blitme()
-
-		# Make the most recently drawn screen invisible
-		pygame.display.flip()
+		gf.update_screen(ai_settings, screen, ship)
 
 
 # run game
