@@ -13,7 +13,7 @@ def run_game():
 	pygame.display.set_caption("Alien Invasion")
 
 	# make a ship
-	ship = Ship(screen)
+	ship = Ship(ai_settings, screen)
 
 	# start the main loop for the game
 	while True:
@@ -22,7 +22,7 @@ def run_game():
 
 		# update ship
 		ship.update()
-		
+
 		# Redraw the scrren during each pass through the game loop
 		gf.update_screen(ai_settings, screen, ship)
 
