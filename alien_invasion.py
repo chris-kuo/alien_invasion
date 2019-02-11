@@ -28,14 +28,10 @@ def run_game():
 
 		# update ship
 		ship.update()
+
 		# update bullets
-		bullets.update()
-
-		# Get rid of bullets that have moved offscreen
-		for bullet in bullets.copy():
-			if bullet.rect.bottom <= 0:
-				bullets.remove(bullet)
-
+		gf.update_bullets(bullets)
+		
 		# Redraw the scrren during each pass through the game loop
 		gf.update_screen(ai_settings, screen, ship, bullets)
 
